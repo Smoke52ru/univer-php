@@ -1,0 +1,10 @@
+root
+└─ data
+ᅠᅠ├─ comments.txt
+ᅠᅠ├─ files.txt
+ᅠᅠ└─ users.txt
+└─ html
+ᅠᅠ└─ comment_form.html
+├─ index.php
+└─ php
+ᅠᅠ└─ add_comment.php

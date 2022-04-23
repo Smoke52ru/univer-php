@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+label{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+label > * {
+    width: 50%;
+}
