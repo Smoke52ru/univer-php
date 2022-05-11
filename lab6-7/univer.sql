@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 10 2022 г., 16:20
+-- Время создания: Май 11 2022 г., 20:56
 -- Версия сервера: 8.0.27
 -- Версия PHP: 7.4.26
 
@@ -20,6 +20,37 @@ SET time_zone = "+00:00";
 --
 -- База данных: `univer`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE IF NOT EXISTS `orders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `customer_id` int DEFAULT NULL,
+  `customer_name` varchar(50) NOT NULL,
+  `customer_contact` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `order_products`
+--
+
+DROP TABLE IF EXISTS `order_products`;
+CREATE TABLE IF NOT EXISTS `order_products` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `order_id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `product_name` varchar(50) NOT NULL,
+  `product_price` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -68,6 +99,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`login`, `password`, `name`, `birthdate`, `email`) VALUES
 ('123', '123', '123', '0001-03-12', '123@123.123'),
+('qwert', 'qwert', 'lapin_as', '1111-11-11', 'NoobSaibot676@ya.ru'),
 ('qq', '12345', 'qwerty', '2000-11-11', '123123@ya.ru'),
 ('1', '1', '1', '0001-01-01', '1@ya.ru');
 COMMIT;
