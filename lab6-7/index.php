@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION['cart_list'])) {
-    echo "<a href='cart.php'>Корзина</a>: " . count($_SESSION['cart_list']);
+    echo "<a href='basket.php'>Корзина</a>: " . count($_SESSION['cart_list']);
 }
 
 include "db.php";
@@ -110,7 +110,7 @@ while ($result = mysqli_fetch_assoc($req)) {
                     Подробнее
                 </a>
 
-                <a href="cart.php?course_id=<?php echo $course_item['id'] ?>">
+                <a href="basket.php?course_id=<?php echo $course_item['id'] ?>">
                     В корзину
                 </a>
             </div>

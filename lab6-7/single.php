@@ -46,7 +46,7 @@ if ( isset($_GET['id']) ) {
 
 	<a href="order.php?title=<?php echo $current_course['name']?>">Купить в 1 клик</a>
 	<br>
-	<a href="cart.php?course_id=<?php echo $current_course['id']?>">Добавить в корзину</a>
+	<a href="basket.php?course_id=<?php echo $current_course['id']?>">Добавить в корзину</a>
 
 	
 </body>

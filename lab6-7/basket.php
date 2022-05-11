@@ -75,7 +75,7 @@ if ( isset($_GET['course_id']) && !empty($_GET['course_id']) ) {
 				<li>
 					<?php echo $course['name']; ?> |
 					<?php echo $course['price']; ?> грн. | 
-					<a href="cart.php?delete_id=<?php echo $course['id'];?>">Х</a>
+					<a href="basket.php?delete_id=<?php echo $course['id'];?>">Х</a>
 				</li>
 
 			<?php endforeach; ?>
